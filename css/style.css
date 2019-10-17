@@ -1,0 +1,57 @@
+:root {
+    --yellow: rgba(247, 223, 7, 0.76);
+    --orange: rgb(184, 104, 1);
+    --black: rgb(20, 5, 5);
+}
+
+html {
+    box-sizing: border-box;
+    font-weight: 700;
+    color: var(--black);
+}
+
+body {
+    background: linear-gradient(to right, var(--orange), var(--black));
+    margin: 20px;
+}
+
+.top {
+    display: grid;
+    gap: 20px;
+    grid-template-areas: 
+    "party party cta1"
+    "party party cta2"
+}
+
+.party {
+    grid-area: party;
+    min-height: 450px;
+    background-image: url('../img/epicspook.png');
+    /*background-size: cover;
+    background-position: top;*/
+}
+
+.cta {
+    background: var(--yellow);
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+}
+
+.cta1 {
+    grid-area: cta1;
+}
+
+.cta2 {
+    grid-area: cta2;
+}
+
+.price {
+    font-size: 2.75rem;
+    font-weight: 400;
+}
+
+.cta p {
+    margin: 0;
+}
