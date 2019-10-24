@@ -24,31 +24,31 @@
                 <p>Drinks</p>
             </div>
         </div>
-    </div>
-    
+   
     <nav class="menu">
         <button aria-expanded="false" aria-controls="menu-list">
         <span class="open">☰</span>
         <span class="close">×</span>
         Menu
-    </button>
-    <ul id="menu-list">
-        <li>
-            <a href="#">Snacks</a>
-        </li>
-        <li>
-            <a href="#">Drinks</a>
-        </li>
-        <li>
-            <a href="#">Desserts</a>
-        </li>
-        <li>
-            <a href="#">Reservations</a>
-        </li>
-    </ul>
+        </button>
+
+        <ul id="menu-list">
+            <li>
+                <a href="#">Snacks</a>
+            </li>
+            <li>
+                <a href="#">Drinks</a>
+            </li>
+            <li>
+                <a href="#">Desserts</a>
+            </li>
+            <li>
+                <a href="#">Reservations</a>
+            </li>
+        </ul>
     </nav>
 
-    <div class="features">
+    <section class="features">
         <div class="feature">
             <span class="icon">🧀</span>
             <h3>Snacks</h3>
@@ -64,10 +64,43 @@
             <h3>Music</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, ipsam.</p>
         </div>
-    </div>
+    </section>
 
-    <div class="about">
-        
-    </div>
+    <section class="about">
+        <img src="img/spookNana.jpg" alt="spooky banana">
+            <div class="about_details">
+                <h2>Featured Spooky Boonana</h2>
+                <p>This banana will haunt your soul</p>
+                <p>Eat at your own peril</p>
+                <button>Learn more</button>
+            </div>
+    </section>
+
+    <section class="gallery">
+        <h2>Instant Grams</h2>
+        <img src="http://lorempixel.com/101/101/" alt="">
+        <img src="http://lorempixel.com/102/102/" alt="">
+        <img src="http://lorempixel.com/103/103/" alt="">
+        <img src="http://lorempixel.com/104/104/" alt="">
+        <img src="http://lorempixel.com/105/105/" alt="">
+        <img src="http://lorempixel.com/106/106/" alt="">
+        <img src="http://lorempixel.com/107/107/" alt="">
+        <img src="http://lorempixel.com/108/108/" alt="">
+        <img src="http://lorempixel.com/109/109/" alt="">
+    </section>
+
+</div>
+
+    <script>
+        const menuButton = document.querySelector('button[aria-expanded]');
+        function toggleMenu({target}) {
+          const expanded = target.getAttribute('aria-expanded') === 'true' || false;
+          menuButton.setAttribute('aria-expanded', !expanded);
+          console.log("Aria Expanded Value: ", expanded)
+          console.log("Toggle!");
+          
+        }
+        menuButton.addEventListener('click', toggleMenu)
+    </script>
 </body>
 </html>
